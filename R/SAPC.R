@@ -1,4 +1,4 @@
-#' @name SAPC
+#' @name SAPC_TFM
 #' @title Stochastic Approximation Principal Component Analysis
 #' @description This function calculates several metrics for the SAPC method,
 #' including the estimated factor loadings and uniquenesses, and various
@@ -46,7 +46,7 @@
 #'
 #' data <- mu + F %*% t(A) + epsilon
 #'
-#' result <- SAPC_print(data, m = m, A = A, D = D, p = p)
+#' result <- SAPC_TFM(data, m = m, A = A, D = D, p = p)
 #'
 #' SAPC_MSESigmaA <- result$MSESigmaA
 #' SAPC_MSESigmaD <- result$MSESigmaD
@@ -63,7 +63,7 @@
 #'
 #' print(data_K)
 #' @export
-SAPC_print <- function(x, m, A, D, p) {
+SAPC_TFM <- function(x, m, A, D, p) {
   frobenius.norm <- function(matrix) {
     return(norm(matrix, type = "F"))
   }
