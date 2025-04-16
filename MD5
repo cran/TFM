@@ -1,4 +1,4 @@
-7a6fba20ec4f71477bded4b41aa15422 *DESCRIPTION
+339938b32441f9594b79c5af9bcce612 *DESCRIPTION
 edb3e7d556d023ddada3c913ac73f949 *LICENSE
 f7f7bce93026013cebc3c902d9bfc1dc *NAMESPACE
 850f4dec39bc01f8dbb660724703f4b2 *R/FanPC_TFM.R
@@ -14,6 +14,13 @@ c1cb7a52f30cad1daf937d73e2151c6e *R/SOPC_TFM.R
 42e894cd665b7867c9c678f21b0d8b3f *R/SPC_TFM.R
 cd1b012abf0a6bc6e31473183046ffa0 *R/TFM.R
 6e85f19ef3008f6622141b830285ca73 *R/ttestTFM.R
+b1c9d62441f48fd7a9b95d0b0c65a0a8 *data/concrete.rda
+1e07d9c4b49a7fa58d9b55d0108af5e3 *data/datalist
+a381b0f4fe7eb7029be75ae19411901e *data/protein.rda
+255b5e1819c2f9a5f301118d1e7c3eb0 *data/review.rda
+8d8f53ac4e1a180c68f4ec96819dad4b *data/riboflavin.rda
+9bf8816b7d26622f8c30fc29735da4c7 *data/riboflavinv100.rda
+09b8e40d99c29e82e6e82bc909ecd9f2 *data/yacht_hydrodynamics.rda
 6ff9899fdcac8313a1517f7c132eeeed *man/FanPC_TFM.Rd
 644d265bc6269e565ca2da570ef998bd *man/GulPC_TFM.Rd
 315c0cc5f7941814f2025483b9fd91fb *man/IPC_TFM.Rd
@@ -26,4 +33,10 @@ cc7d0caceec8f257dc900db2e0783519 *man/PPC2_TFM.Rd
 1866f88bce83ff20fdea9bfc617825ba *man/SOPC_TFM.Rd
 b95968ff445fd06ebc3209d77ce3ec8a *man/SPC_TFM.Rd
 bab668e985ddeb0444ec4d7b8992c55f *man/TFM.Rd
+bade182e28237fd72248ae52da5888ce *man/concrete.Rd
+a3c71869e1a8bc8e925202251f0baeed *man/protein.Rd
+57a12cc291aafe7c6188b83c380d8a65 *man/review.Rd
+42f959070acfddf88036a61b1286f3ee *man/riboflavin.Rd
+6b936a7463c9dd46e0a5e12274490244 *man/riboflavinv100.Rd
 5c621316338a4c2dbcf667bd71a4b0c8 *man/ttest.TFM.Rd
+7eaf0edb883cb14f3c0cafb5bf4a4422 *man/yacht_hydrodynamics.Rd
