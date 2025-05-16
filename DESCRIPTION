@@ -1,7 +1,7 @@
 Package: TFM
 Type: Package
 Title: Sparse Online Principal Component for Truncated Factor Model
-Version: 0.3.0
+Version: 0.4.0
 Authors@R: 
     c(person("Beibei", "Wu", role = "aut"), person("Guangbao", "Guo", role = c("aut", "cre"), 
     email = "ggb11111111@163.com"))
@@ -14,9 +14,9 @@ Encoding: UTF-8
 Language: en-US
 Author: Beibei Wu [aut],
   Guangbao Guo [aut, cre]
-NeedsCompilation: yes
 Maintainer: Guangbao Guo <ggb11111111@163.com>
 Imports: relliptical, SOPC, MASS, mvtnorm, matrixcalc
-Packaged: 2025-04-16 13:08:21 UTC; 86198
+Packaged: 2025-05-16 08:48:24 UTC; 86198
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2025-04-16 14:30:17 UTC
+Date/Publication: 2025-05-16 09:20:05 UTC
