@@ -24,34 +24,18 @@ A list containing:
 This function performs a simple t-test for each variable in the dataset of a truncated factor model and calculates the False Discovery Rate (FDR) and power.
 }
 \examples{
-# Load necessary libraries
 library(MASS)
 library(mvtnorm)
-
 set.seed(100)
-# Set parameters for the simulation
-p <- 400  # Number of features
-n <- 120  # Number of samples
-K <- 5    # Number of latent factors
-true_non_zero <- 100  # Assume 100 features have non-zero means
-
-# Simulate factor loadings matrix B (p x K)
+p <- 400 
+n <- 120 
+K <- 5   
+true_non_zero <- 100
 B <- matrix(rnorm(p * K), nrow = p, ncol = K)
-
-# Simulate factor scores (n x K)
 FX <- MASS::mvrnorm(n, rep(0, K), diag(K))
-
-# Simulate noise U (n x p), assuming Student's t-distribution with 3 degrees of freedom
 U <- mvtnorm::rmvt(n, df = 3, sigma = diag(p))
-
-# Create the data matrix X based on the truncated factor model
-# Non-zero means for the first 100 features
 mu <- c(rep(1, true_non_zero), rep(0, p - true_non_zero))
 X <- rep(1, n) \%*\% t(mu) + FX \%*\% t(B) + U  # The observed data
-
-# Apply the t-test function on the data
 results <- ttest.TFM(X, p, alpha = 0.05)
-
-# Print the results
 print(results)
 }

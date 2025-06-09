@@ -15,6 +15,7 @@
 #' \item{LSigmaD}{Loss metric for the estimated uniquenesses (Ds), indicating the relative error compared to the true uniquenesses (D).}
 #' \item{tau}{Proportion of zero factor loadings in the estimated loadings matrix (As).}
 #' @examples
+#' \dontrun{
 #' library(MASS)
 #' library(relliptical)
 #' library(SOPC)
@@ -24,27 +25,6 @@
 #' SPC_LSigmaA <- c()
 #' SPC_LSigmaD <- c()
 #' SPC_tau <- c()
-#'
-#' p <- 10
-#' m <- 5
-#' n <- 2000
-#'
-#' mu <- t(matrix(rep(runif(p, 0, 1000), n), p, n))
-#' mu0 <- as.matrix(runif(m, 0))
-#' sigma0 <- diag(runif(m, 1))
-#' F <- matrix(mvrnorm(n, mu0, sigma0), nrow = n)
-#' A <- matrix(runif(p * m, -1, 1), nrow = p)
-#'
-#' lower <- c(rep(-0.5, p - 3), -5, -5, -Inf)
-#' upper <- c(rep(0.5, p - 3), 5, 5, Inf)
-#' Sigma <- diag(runif(p, 0, 1))
-#' mut <- runif(p, 0, 10)
-#'
-#' trnor <- rtelliptical(n, mut, Sigma, lower, upper, dist = "Normal")
-#' epsilon <- matrix(trnor, nrow = n)
-#' D <- Sigma
-#'
-#' data <- mu + F %*% t(A) + epsilon
 #'
 #' result <- SPC_TFM(data, A, D, m, p)
 #'
@@ -61,7 +41,7 @@
 #'                      LSD = SPC_LSigmaD,
 #'                      tau = SPC_tau)
 #'
-#' print(data_G)
+#' print(data_G)}
 #' @export
 #' @importFrom SOPC SPC
 SPC_TFM <- function(data, A, D, m, p) {

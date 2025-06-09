@@ -1,34 +1,30 @@
 \name{protein}
+\title{Data Frame 'protein'}
 \alias{protein}
-\docType{data}
-\title{Protein Secondary Structure Data}
 \description{
-This dataset contains protein sequences and their corresponding secondary structures, including beta-sheets (E), helices (H), and coils (_).
-}
+This is the Protein Data Set from the UCI Machine Learning Repository.
+It contains information about protein concentration in different samples.
+} 
 \usage{
-data(protein)
-}
+protein
+} 
 \format{
-A data frame with multiple rows and 2 columns representing protein sequences and their secondary structures.
-\describe{
-\item{V1}{Amino acid sequence (using 3-letter codes).}
-\item{V2}{Secondary structure of the protein (E for beta-sheet, H for helix, _ for coil).}
-}
-}
-\details{
-The dataset is used for predicting protein secondary structures from amino acid sequences. The first few numbers in each sequence are parameters for neural networks and should be ignored. The '<' symbol is used as a spacer between proteins and to mark the beginning and end of sequences.
-}
-\note{
-The biophysical constants included in the dataset were found to be unhelpful and are generally ignored in analysis.
-}
-\source{
-Vince G. Sigillito, Applied Physics Laboratory, Johns Hopkins University.
-}
-\examples{
-# Load the dataset
-data(protein)
-
-# Print the first few rows of the dataset
-print(head(protein))
-}
-\keyword{datasets}
+A data frame with
+45730
+rows and
+10
+columns.
+\itemize{
+\item{\code{SampleID}: A unique identifier for each sample.}
+\item{\code{Protein1}: Concentration of Protein 1.}
+\item{\code{Protein2}: Concentration of Protein 2.}
+\item{\code{Protein3}: Concentration of Protein 3.}
+\item{\code{Protein4}: Concentration of Protein 4.}
+\item{\code{Protein5}: Concentration of Protein 5.}
+\item{\code{Protein6}: Concentration of Protein 6.}
+\item{\code{Protein7}: Concentration of Protein 7.}
+\item{\code{Protein8}: Concentration of Protein 8.}
+\item{\code{Protein9}: Concentration of Protein 9.}
+\item{\code{Protein10}: Concentration of Protein 10.}
+} 
+} 

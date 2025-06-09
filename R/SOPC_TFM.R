@@ -19,6 +19,7 @@
 #' \item{LSD}{Loss metric for the estimated uniquenesses (Dso), indicating the relative error compared to the true uniquenesses (D).}
 #' \item{tauA}{Proportion of zero factor loadings in the estimated loadings matrix (Aso), indicating the sparsity of the loadings.}
 #' @examples
+#' \dontrun{
 #' library(MASS)
 #' library(relliptical)
 #' library(SOPC)
@@ -28,25 +29,7 @@
 #' SOPC_LSA <- c()
 #' SOPC_LSD <- c()
 #' SOPC_TAUA <- c()
-#'
-#' p = 10; m = 5
-#' n = 2000  # Set n to 2000
-#' mu = t(matrix(rep(runif(p, 0, 1000), n), p, n))
-#' mu0 = as.matrix(runif(m, 0))
-#' sigma0 = diag(runif(m, 1))
-#' F = matrix(mvrnorm(n, mu0, sigma0), nrow = n)
-#' A = matrix(runif(p * m, -1, 1), nrow = p)
-#'
-#' # Sampling from the Truncated Normal distribution
-#' lower = c(rep(-0.5, p - 3), -5, -5, -Inf)
-#' upper = c(rep(0.5, p - 3), 5, 5, Inf)
-#' Sigma = as.matrix(diag(rep(runif(p, 0, 1))))
-#' mut = runif(p, 0, 10)
-#' trnor = rtelliptical(n, mut, Sigma, lower, upper, dist = "Normal")
-#' epsilon = matrix(trnor, nrow = n)
-#' D = Sigma
-#'
-#' data = mu + F %*% t(A) + epsilon
+#' 
 #'
 #' Z = data.frame(SOPC_TFM(data, m = m, p = p, gamma = 0.1, eta = 0.8, A = A, D = D))
 #' SOPC_MSEA = c(SOPC_MSEA, Z$MSEA)
@@ -58,7 +41,7 @@
 #' # Ensure the data frame has the correct column structure, even with one value
 #' data_F = data.frame(n = rep(n, length(SOPC_MSEA)), MSEA = SOPC_MSEA, MSED = SOPC_MSED,
 #'  LSA = SOPC_LSA, LSD = SOPC_LSD, tauA = SOPC_TAUA)
-#' data_F
+#' data_F}
 #'
 #' @export
 

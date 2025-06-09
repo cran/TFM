@@ -32,18 +32,6 @@ This function performs Principal Component Analysis (PCA) on a given data set to
 library(SOPC)
 library(relliptical)
 library(MASS)
-n=1000
-p=10
-m=5
-mu=t(matrix(rep(runif(p,0,1000),n),p,n))
-mu0=as.matrix(runif(m,0))
-sigma0=diag(runif(m,1))
-F=matrix(mvrnorm(n,mu0,sigma0),nrow=n)
-A=matrix(runif(p*m,-1,1),nrow=p)
-trnor <- relliptical(n*p,0,1)
-epsilon=matrix(trnor,nrow=n)
-D=diag(t(epsilon)\%*\%epsilon)
-data=mu+F\%*\%t(A)+epsilon
 results <- PC1_TFM(data, m, A, D)
 print(results)}
 }

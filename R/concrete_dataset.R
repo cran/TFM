@@ -1,0 +1,32 @@
+#' Concrete Mixture and Compressive Strength Dataset  
+#'  
+#' A dataset that includes the proportions of concrete ingredients (such as cement, slag, fly ash, water, superplasticizer, and aggregates)  
+#' as well as the mechanical and workability properties (slump, flow, and 28-day compressive strength) of high-performance concrete (HPC).  
+#'  
+#' @format A data frame with 103 observations and 10 variables:  
+#' \describe{  
+#'   \item{\code{Cement}}{The mass of Portland cement. Primary binder providing compressive strength through hydration.}  
+#'   \item{\code{Slag}}{The mass of blast furnace slag. Supplementary cementitious material (SCM) that reduces hydration heat and enhances durability.}  
+#'   \item{\code{Fly.ash}}{The mass of fly ash. SCM from coal combustion that improves workability and reduces cement usage.}  
+#'   \item{\code{Water}}{The mass of mixing water. Essential for cement hydration; water-to-binder ratio determines strength and workability.}  
+#'   \item{\code{SP}}{The mass of superplasticizer. Chemical admixture that enhances workability while reducing water content.}  
+#'   \item{\code{Coarse.Aggr.}}{The mass of coarse aggregate (e.g., crushed stone). Provides structural rigidity and volume stability.}  
+#'   \item{\code{Fine.Aggr.}}{The mass of fine aggregate (e.g., river sand). Fills voids between coarse aggregates for optimal particle packing.}  
+#'   \item{\code{SLUMP.cm.}}{Concrete slump in cm. Key workability metric; higher values indicate greater flowability.}  
+#'   \item{\code{FLOW.cm.}}{Concrete flow diameter in cm. Supplementary workability metric for self-consolidating concretes.}  
+#'   \item{\code{Compressive.Strength..28.day..Mpa.}}{28-day compressive strength in MPa. Critical mechanical property measured after standard curing.}  
+#' }
+#' 
+
+#'  
+#' @examples  
+#' data(concrete)  
+#'   
+#' # Basic summary  
+#' summary(concrete)  
+#'   
+#' # Strength vs Cement content  
+#' plot(concrete$Cement, concrete$Compressive.Strength..28.day..Mpa.,  
+#'      xlab = "Cement (kg/m³)", ylab = "28-day Compressive Strength (MPa)",  
+#'      main = "Cement Content vs Strength")  
+"concrete"

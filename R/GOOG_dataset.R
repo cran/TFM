@@ -1,0 +1,35 @@
+#' Google (GOOG) Stock Price Dataset
+#'
+#' A dataset containing various stock price - related information for Google (GOOG). 
+#' It can be used for a wide range of financial analyses such as studying price trends,
+#' volatility, and relationships with trading volume.
+#'
+#' @format A data frame with 6 rows (in the provided preview, actual may vary) and 10 variables:
+#' \describe{
+#'   \item{\code{close}}{The closing price of the stock on a particular day. This is the price at which the stock last traded during the regular trading session. It's an important metric as it reflects the market's perception of the stock's value at the end of the day.}
+#'   \item{\code{high}}{The highest price at which the stock traded during the day. It shows the peak level of investor interest and buying pressure during that trading period.}
+#'   \item{\code{low}}{The lowest price at which the stock traded during the day. It indicates the lowest level the stock reached, which might be due to selling pressure or other market factors.}
+#'   \item{\code{open}}{The opening price of the stock when the market started trading for the day. It can set the tone for the day's price movements based on overnight news, global market trends, etc.}
+#'   \item{\code{volume}}{The number of shares traded during the day. High volume often signals significant market activity and can confirm price trends. For example, a large volume increase with a rising price might indicate strong buying interest.}
+#'   \item{\code{adjClose}}{The adjusted closing price. This value takes into account corporate actions like stock splits, dividends, and rights offerings. By adjusting for these events, it provides a more accurate picture of the stock's performance over time compared to just the raw closing price.}
+#'   \item{\code{adjHigh}}{The adjusted highest price for the day. Similar to \code{adjClose}, it incorporates corporate action adjustments to give a more precise view of the intraday price high.}
+#'   \item{\code{adjLow}}{The adjusted lowest price for the day. Incorporates corporate action adjustments to accurately represent the intraday price low.}
+#'   \item{\code{adjOpen}}{The adjusted opening price for the day. Adjusted for corporate actions to reflect the true starting price in the context of the overall stock history.}
+#'   \item{\code{adjVolume}}{The adjusted volume. Adjusted for corporate actions (e.g., if there was a stock split, the volume might be adjusted proportionally) to provide a consistent measure over time.}
+#' }
+#'
+#'
+#' @examples
+#' data(GOOG)
+#'
+#' # Basic summary statistics
+#' summary(GOOG)
+#'
+#' # Plotting the closing price over time
+#' if (requireNamespace("ggplot2", quietly = TRUE)) {
+#'   ggplot2::ggplot(GOOG, ggplot2::aes(x = seq_along(close), y = close)) +
+#'     ggplot2::geom_line() +
+#'     ggplot2::labs(x = "Trading Day", y = "Closing Price")
+#' }
+#'
+"GOOG"

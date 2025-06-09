@@ -1,0 +1,21 @@
+#' Graduate Admissions Prediction Dataset  
+#'  
+#' A dataset for predicting postgraduate admission probability, integrating standardized test scores, academic performance, and application - related metrics.  
+
+
+#' @format A data frame with `n` observations (rows) and 8 variables:  
+#' \describe{  
+#'   \item{\code{GRE.Score}}{Graduate Record Examinations (GRE) score. A standardized test for graduate admissions (score range varies by exam version; common scales: 260–340 or old 130–170 per section).}  
+#'   \item{\code{TOEFL.Score}}{Test of English as a Foreign Language (TOEFL) score. Measures English proficiency (standard range: 0–120).}  
+#'   \item{\code{University.Rating}}{Target university’s academic rating (1–5 scale). A higher score indicates stronger institutional reputation/resources.}  
+#'   \item{\code{SOP}}{Statement of Purpose (SOP) rating (1–5 scale). Reflects the quality of the applicant’s research motivation and fit with the program.}  
+#'   \item{\code{LOR}}{Letter of Recommendation (LOR) rating (1–5 scale). Captures the referee’s evaluation of the applicant’s academic potential.}  
+#'   \item{\code{CGPA}}{Cumulative Grade Point Average (CGPA). Summarizes undergraduate academic performance (scale depends on institution; e.g., 4.0 or 10.0).}  
+#'   \item{\code{Research}}{Research experience indicator (\code{0} = no research, \code{1} = has research). A binary flag for involvement.}  
+#'   \item{\code{Chance.of.Admit}}{Admission probability (continuous value between 0 and 1). The target variable, with higher values indicating greater admission likelihood.}  
+#' }  
+
+
+
+
+"admission_predict"  
